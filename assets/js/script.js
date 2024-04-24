@@ -47,7 +47,7 @@ $(document).ready(function(){
         
         num1 = parseInt($("#numero1").val());
         num2 = parseInt($("#numero2").val());
-        resultado = num1 + num2;
+        resultado = num1 - num2;
         
         $("#resultado").text(resultado);
         console.log(resultado);
@@ -64,6 +64,10 @@ $(document).ready(function(){
             $("#error1").text("Debe agregar un numero");
             return;
         }
+        if ($("#numero2").val() === "0"){
+            $("#resultado").text("No se divide por 0");
+            return;
+        }
         if ($("#numero2").val() === ""){
             $("#error2").text("Debe agregar un numero");
             return;
@@ -71,7 +75,7 @@ $(document).ready(function(){
         
         num1 = parseInt($("#numero1").val());
         num2 = parseInt($("#numero2").val());
-        resultado = num1 + num2;
+        resultado = num1 / num2;
         
         $("#resultado").text(resultado);
         console.log(resultado);
@@ -95,11 +99,12 @@ $(document).ready(function(){
         
         num1 = parseInt($("#numero1").val());
         num2 = parseInt($("#numero2").val());
-        resultado = num1 + num2;
+        resultado = num1 * num2;
         
         $("#resultado").text(resultado);
         console.log(resultado);
     });
+
     $("#btnSumar").click(function(){
 
         $("#error1").text("");
